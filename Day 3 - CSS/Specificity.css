@@ -1,0 +1,24 @@
+*{
+    color:blue; /*Universal*/
+    font-size: 30px;
+}
+
+h1{
+    color:black; /*Element*/
+}
+
+h1,p{
+    color:lightblue; /*grouping*/
+}
+
+.note{
+    color:green; /*class*/
+}
+
+.note.highlight{
+    color:black; /*Multiple Class*/
+}
+
+#style{
+    color:burlywood /*Id*/
+}
