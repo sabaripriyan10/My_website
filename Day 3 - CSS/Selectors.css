@@ -1,0 +1,56 @@
+pre{
+    font-size:30px;
+    color:blueviolet;
+    border:2px dashed red;
+}
+
+/*Element Selector*/
+h1{
+    color:blue;
+}
+
+/*Class Selector*/
+.highlight{
+    background-color:yellow;
+}
+
+/*ID Selector*/
+#main-title{
+    text-decoration:underline;
+}
+
+/*Universal Selector*/
+*{
+    font-family:Arial,sans-serif;
+}
+
+/*Grouping Selector*/
+h2,h3,p{
+    margin-bottom:10px;
+}
+
+/*Descendant Selector*/
+div p{
+    color:green;
+}
+
+/*Child Selector*/
+.parent>p{
+    border:2px solid red;
+}
+
+/*Adjacent Sibling Selector*/
+h2+p{
+    background-color:lightblue;
+}
+
+/*General Sibling Selector*/
+h3~p{
+    color:purple;
+}
+
+/*Attribute Selector*/
+input[type="text"]{
+    border:2px solid orange;
+    padding:5px;
+}
