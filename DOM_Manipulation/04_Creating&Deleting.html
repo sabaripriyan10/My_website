@@ -1,0 +1,51 @@
+<!doctype html>
+
+<html>
+
+    <head>
+        <title>Browser</title>
+    </head>
+
+    <body>
+
+        <div>
+            
+            <label>Fruit Name: </label>
+            <input id="name">
+            <button onclick="add()">Add</button>
+            <br><br>
+            <b>Fruits List</b><br><br>
+            <ol class="list">
+            </ol>
+
+            <button onclick="del()">Del</button>
+
+            <br><br>
+            <button onclick="rem()">Del Entire List</button>
+
+        </div>
+
+    </body>
+
+    <script>
+        /*Adding fruits name to the list*/
+        function add(){
+            let name = document.querySelector("#name");
+
+            let item = document.createElement("li");
+            item.textContent=name.value;
+            document.querySelector(".list").appendChild(item);  /*using appendChild(), append can add without creating tag*/
+            name.value="";
+        }
+
+        function del(){
+            parentt=document.querySelector(".list");
+            parentt.removeChild(parentt.lastElementChild);  /*using removeChild()*/
+        }
+
+        function rem(){
+            element = document.querySelector(".list");  /*using remove*/
+            element.remove();
+        }
+    </script>
+</html>

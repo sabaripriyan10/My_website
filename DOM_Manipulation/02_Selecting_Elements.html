@@ -1,0 +1,62 @@
+<!doctype html>
+
+<html>
+
+    <head>
+        <title>Browser</title>
+    </head>
+
+    <body>
+        <h1 id="title">Heading1</h1>
+
+        <p class="note">This is para1</p>
+        <p class="note">This is para2</p>
+
+        <pre>
+            abcd   efgh
+        </pre>
+        <pre>
+            mnop   qrst
+        </pre>
+        <button onclick="clickk(true)">all class</button>
+        <button onclick="clickk(false)">click</button>
+        
+
+    </body>
+
+    <script>
+        const title = document.getElementById("title"); /*selects element with that id tag*/
+        console.log(title);
+
+        const class_p = document.getElementsByClassName("note"); /*selects all elements with that class name (HTML Collections)*/
+        console.log(class_p);
+        console.log(class_p.length)
+        
+
+        const pre_tag = document.getElementsByTagName("pre"); /*selects all elements with that tag name (HTML Collections)*/
+        console.log(pre_tag);
+
+        const query=document.querySelector("h1"); /*selects the first element with that selector*/
+        console.log(query);
+
+        const all_p=document.querySelectorAll("p"); /*selects all the elements with that selector (NodeList)*/
+        console.log(all_p)
+        
+        function clickk(val){
+            title.textContent="Title";
+
+            if(val){
+            for(let i=0;i<class_p.length;i++){
+                class_p[i].style.color="red";
+            }}
+            class_p[0].style.color="red";
+
+            pre_tag[0].innerHTML="<h1>abcd efgh</h1>";
+
+            query.style.color="blue";
+
+            all_p.forEach(tagg=>{tagg.style.backgroundColor="yellow";})
+            all_p.forEach(tagg=>{tagg.style.display="inline";})
+        }
+    </script>
+</html>

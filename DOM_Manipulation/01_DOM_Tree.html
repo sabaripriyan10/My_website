@@ -1,0 +1,29 @@
+<!doctype html>
+
+<html>
+
+    <head>
+        <title>Browser</title>
+    </head>
+
+    <body>
+        <h1>Heading</h1>
+        <p id="note">This is paragraph</p>
+
+        <button onclick="change()">change</button> <!--calls change function-->
+    </body>
+
+    <script>
+        console.log(document); /*It prints the DOM tree*/
+
+        document.querySelector("h1").textContent="Welcome"; /*h1 content change into Welcome*/
+
+        document.getElementById("note").innerHTML="<h2>Note<h2>"; /*using getElementById*/
+
+        document.getElementById("note").style.color="red"; /*styling*/
+
+        function change(){
+            return document.getElementById("note").style.textAlign="center"; /*centers the text*/
+        }
+    </script>
+</html>

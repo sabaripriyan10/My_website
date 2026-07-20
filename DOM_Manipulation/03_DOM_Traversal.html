@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html>
+
+    <head>
+        <title>Browser</title>
+    </head>
+
+    <body>
+
+        <div>
+
+            <h1>Heading</h1>
+
+            <p id="para">Paragraph</p>
+
+            <h2>Heading</h2>
+
+        </div>
+
+    </body>
+
+    <script>
+        let element = document.getElementById("para");
+        element.parentElement.style.border="10px solid red"; /*parentElement*/
+        element.previousElementSibling.style.color="brown"; /*previous sibling*/
+        element.nextElementSibling.style.color="tomato"; /*next sibling*/
+
+        let parentt = document.querySelector("div");    
+        console.log(parentt.children)   /*children*/
+        for (let item of parentt.children){
+            item.style.textAlign="center";
+            item.style.border="1px solid black";
+        }
+        parentt.firstElementChild.style.backgroundColor="lightblue"; /*First child element*/
+        parentt.lastElementChild.textContent="I am the Last Child"; /*Last child element*/
+    </script>
+</html>
